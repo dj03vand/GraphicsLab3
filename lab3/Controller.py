@@ -27,6 +27,7 @@ class Controller(viz.EventClass):
 			x = i.getVX() + x
 			y = i.getVY() + y
 			if(x + 10  > 100 or x - 10 < -100):
+				//set the vector to bounce off walls
 				i.setVXVY(i.getVX() * -1, i.getVY())
 				x = i.getVX() + x
 				viz.playSound('cartoon053.wav')
